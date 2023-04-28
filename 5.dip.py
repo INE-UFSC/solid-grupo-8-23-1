@@ -4,9 +4,14 @@ Dependency Inversion Principle
 Dependências devem ser feitas sobre abstrações, não sobre implementações concretas 
 
 """
+class Entity:
+    def hp(self):
+        pass
+    def name(self):
+        pass
+    
 
-
-class Player:
+class Player(Entity):
     def __init__(self, name):
         self.stats = StatsReporter(self)
         self.__name = name
@@ -20,7 +25,7 @@ class Player:
         return self.__name
 
 class StatsReporter:
-    def __init__(self, char: Player):
+    def __init__(self, char: Entity):
         self.char = char
 
     def report(self):
