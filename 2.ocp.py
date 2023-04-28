@@ -11,12 +11,15 @@ class Animal:
         pass
 
     def make_sound(self):
-        if self.name == 'lion':
-            print('roar')
-        elif self.name == 'mouse':
-            print('squeak')
-        else:
-            print('...')
+        print('...')
+
+class Lion(Animal):
+    def make_sound(self):
+        print("roar")
+
+class Mouse(Animal):
+    def make_sound(self):
+        print("squeak"
 
 animals = [
     Animal('lion'),
