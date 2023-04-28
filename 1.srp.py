@@ -13,6 +13,6 @@ class Animal:
     def get_name(self) -> str:
         pass
 
-    # salva no DB
+class Db:
     def save(self, animal: Animal):
         pass
