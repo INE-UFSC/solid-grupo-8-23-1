@@ -14,5 +14,7 @@ class Animal:
         pass
 
 class Db:
+    def __init__(self):
+        pass
     def save(self, animal: Animal):
         pass
