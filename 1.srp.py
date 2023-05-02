@@ -13,8 +13,6 @@ class Animal:
     def get_name(self) -> str:
         pass
 
-class Db:
-    def __init__(self):
-        pass
+class DataBase:
     def save(self, animal: Animal):
         pass
