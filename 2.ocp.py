@@ -45,12 +45,11 @@ class Customer:
     def discount(self):
         pass
         
-class VIP(Costumer):
+class VIP(Customer):
     def discount(self):
         return 0.6
         
-    
-class Fav(Costumer):
+class Fav(Customer):
     def discount(self):
         return 0.8
         
@@ -60,5 +59,5 @@ class Discount:
         self.price = price
 
     def give_discount(self):
-        return self.costumer.discount * self.price
-
+        return self.customer.discount() * self.price
+    
