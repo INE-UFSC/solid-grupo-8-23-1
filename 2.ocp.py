@@ -19,11 +19,11 @@ class Lion(Animal):
 
 class Mouse(Animal):
     def make_sound(self):
-        print("squeak"
+        print("squeak")
 
 animals = [
-    Animal('lion'),
-    Animal('mouse')
+    Lion('lion'),
+    Mouse('mouse')
 ]
 
 def animal_sound(animals: list):
