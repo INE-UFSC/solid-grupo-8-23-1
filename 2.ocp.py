@@ -41,14 +41,24 @@ usando essa classe abaixo. Quando você decide dar 40% de desconto a clientes VI
 você decide mudar a classe da seguinte forma:
 """
 
+class Customer:
+    def discount(self):
+        pass
+        
+class VIP(Costumer):
+    def discount(self):
+        return 0.6
+        
+    
+class Fav(Costumer):
+    def discount(self):
+        return 0.8
+        
 class Discount:
     def __init__(self, customer, price):
         self.customer = customer
         self.price = price
 
     def give_discount(self):
-            if self.customer == 'fav':
-                return self.price * 0.2
-            if self.customer == 'vip':
-                return self.price * 0.4
+        return self.costumer.discount * self.price
 
