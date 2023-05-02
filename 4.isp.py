@@ -4,27 +4,18 @@ Crie interfaces que são específicas. Clientes não devem depender de interface
 """
 from abc import ABC
 
-class IJanela(ABC):
-    def maximizar(self):
+class IJanela(ABC):    
+    def fechar(self):
         raise NotImplementedError
-    
-    def minimizar(self):
-        raise NotImplementedError
-    
+
+class FixedJanela(IJanela):
     def mostrar_menu(self):
         raise NotImplementedError
         
     def fechar(self):
         raise NotImplementedError
 
-class FixedJanela(ABC):
-    def mostrar_menu(self):
-        raise NotImplementedError
-        
-    def fechar(self):
-        raise NotImplementedError
-
-class MenulessJanela(ABC):
+class MenulessJanela(IJanela):
     def maximizar(self):
         raise NotImplementedError
     
